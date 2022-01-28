@@ -33,7 +33,6 @@ const skuSorter = (filter,arr) => {
         if(filter){
             sortedBySKU = arr.sort((a,b) => {
                 
-            
             return a.sku - b.sku
 
             
