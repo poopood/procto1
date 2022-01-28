@@ -52,7 +52,7 @@ const Mew = () => {
 
 
     const sorterr = (heading) => {
-       
+ 
             if(heading === "name"){
                 setWines(nameSorter(nameFilter, wines))
                 setnameFilter(!nameFilter)
@@ -72,7 +72,6 @@ const Mew = () => {
                 setavailabilityFilter(!availabilityFilter)
             }
 
-    
 
     }
 
