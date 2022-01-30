@@ -16,7 +16,7 @@ const Table = ({columns, wines, currentPage, searchInput, sorterr}) => {
                                 className="px-6 py-3 text-left text-xs font-medium text-gray-500 hover:text-gray-900 uppercase tracking-wider cursor-pointer" 
                                 key={column.heading}>
                                     <FontAwesomeIcon
-                                    className="jju"
+                                    className="fa-styling"
                                     icon={faSort}
                                     />
                                     &nbsp;&nbsp;
@@ -44,12 +44,16 @@ const Table = ({columns, wines, currentPage, searchInput, sorterr}) => {
                                             return (
                                                 wine[column.heading] ? (
                                                     <td 
-                                                    className="text-green-500 p-8"
+                                                    className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800
+                                                    availability_row
+                                                    "
                                                     key={column.label}>Available</td>
                                                 ) :
                                                 ( 
                                                     <td
-                                                    className="text-red-500 p-8"
+                                                    className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-green-800
+                                                    availability_row_na
+                                                    "
                                                     key={column.label}>Not Available</td>
                                                 )
                                                 
@@ -60,18 +64,20 @@ const Table = ({columns, wines, currentPage, searchInput, sorterr}) => {
                                             return(
                                                 <td 
                                                 
-                                                className="jju12 p-8"
+                                                className="name_row"
                                                 key={column.label}>
                                                     
                                                     <img src={wine["thumbnail"]} alt="" width="60"/> 
-                                                    <span className="j2">{wine[column.heading]}</span>
+                                                    <span className="name_heading
+                                                    text-gray-600
+                                                    ">{wine[column.heading]}</span>
                                                      </td>
                                             )
                                         }
 
                                         return(
                                             <td 
-                                            className="p-8"
+                                            className="p-8 text-gray-900 text-gray-600"
                                             key={column.label}>{wine[column.heading]}</td>
                                         )
                                     })}
